@@ -1,11 +1,11 @@
 <template>
 	<div>
 		<section>
-    <h1 class="text-5xl font-bold mt-20">👋🏻 Hello, I'm Dan Vega!</h1>
+    <h1 class="text-5xl font-bold mt-20">👋🏻 Hello, I'm Tuan Hiep!</h1>
     <p class="text-base text-gray-900 p-2 italic">Spring Developer Advocate at VMware</p>
   </section>
 	<section class="flex flex-col md:flex-row mt-8">
-    <div class="md:w-3/4">
+    <div class="md:w-3/4 md:pr-10">
       <h2 class="text-3xl font-bold">My Story</h2>
       <p class="text-lg py-2">
         I am a Software Engineer living just outside of one of my favorite places in the world, Cleveland, Ohio. I am a
@@ -23,9 +23,15 @@
         running and lifting weights to get me through the week.
       </p>
     </div>
-		<div class="md:w-1/4">
-			<img src="../assets/images/hip-smile.jpg" alt="" class="w-full rounded-full object-cover aspect-square">
-		</div>
+    <div class="md:w-1/4 md:flex">
+      <img src="../assets/images/hip-smile.jpg" alt="" class="mx-auto w-1/2 md:w-full mt-10 md:my-auto rounded-full object-cover aspect-square">
+    </div>
+  </section>
+  <section>
+    <h2 class="text-3xl font-bold mt-20">Latest Blog Posts</h2>
+    <div class="grid md:grid-cols-3 pt-8 gap-10">
+      <Post :posts="posts" />
+    </div>
   </section>
 	</div>
 </template>
