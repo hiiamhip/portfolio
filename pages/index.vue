@@ -33,13 +33,17 @@
       <Post :posts="posts" />
     </div>
   </section>
+
+  <ContentRenderer v-if="home" :value="home" />
 	</div>
 </template>
 
 <script setup>
-
+const { data: home } = await useAsyncData(() => queryCollection('content').path('/').first())
 </script>
 
 <style lang="scss" scoped>
 
 </style>
+
+
